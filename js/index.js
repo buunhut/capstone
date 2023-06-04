@@ -83,18 +83,108 @@ function boDauTiengViet(str) {
 // var ketQua = boDauTiengViet(text);
 // console.log(ketQua);
 */
-function boDauTiengViet(str) {
-  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+// function boDauTiengViet(str) {
+//   return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+// }
+
+// var input = "thành";
+// var str = boDauTiengViet(input);
+// var kQua = [];
+// for (let i = 0; i < danhSach.length; i++) {
+//   if (boDauTiengViet(danhSach[i].ten).includes(str)) {
+//     kQua.push(danhSach[i]);
+//   }
+// }
+
+// console.log(kQua);
+// console.log(text);
+
+// đỗ dữ liệu cho carousel
+// var data = [
+//     "./img/bg1.jpg",
+//     "./img/bg2.jpg",
+//     "./img/bg3.jpg",
+//     "./img/bg4.jpg",
+//     "./img/bg5.jpg",
+// ]
+
+function getData() {
+  var promise = axios({
+    url: "https://shop.cyberlearn.vn/api/Product",
+    method: "GET",
+    responseType: "json",
+  });
+  //   kết nối API thành công
+  promise.then(function (res) {
+    data = res.data.content;
+    carousel = "";
+
+    data.forEach(function (item) {
+      carousel += `
+        <div class="owl-item">
+            <div class="carouselItem">
+                <div class="picture">
+                    <img src="${item.image}" alt="">
+                </div>
+                <div class="text">
+                    <div class="textTitle">
+                        <h3>${item.name}</h3>
+                        <p>${item.shortDescription}</p>
+                        <h2>$ ${item.price}</h2>
+                        <button onclick="buyNow()">Buy now</button>
+                        <button><a href="./detail.html"></a> Detail</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
+    });
+    //đỗ dữ liệu cho carousel
+    document.getElementById("carousel").innerHTML = carousel;
+
+    var products = "";
+    data.forEach(function (item) {
+      products += `
+        <div class="productItem">
+        <div class="itemBg">
+          <a href="./detail.html">
+              <div class="itemImg">
+                  <img src="${item.image}" alt="hình sản phẩm">
+                  <div class="overlay"></div>
+                  <div class="light"></div>
+
+              </div>
+              <div class="itemText">
+                  <!-- <hr> -->
+                  <div class="itemName">
+                      <h4>${item.name}</h4>
+                  </div>
+                  <div class="itemDescription">
+                      <p>${item.shortDescription}</p>
+                  </div>
+              </div>
+          </a>
+          <div class="itemButton">
+              <button>Buy now</button>
+              <h3>$ ${item.price}</h3>
+          </div>
+            </div>
+        </div>
+
+          `;
+    });
+    // đổ sản phẩm ra ngoài
+    document.getElementById("products").innerHTML = products;
+
+
+
+
+  });
+
+  //   kết nối API lỗi
+  promise.catch(function (err) {
+    console.log(err);
+  });
 }
 
-var input = "thành";
-var str = boDauTiengViet(input);
-var kQua = [];
-for (let i = 0; i < danhSach.length; i++) {
-  if (boDauTiengViet(danhSach[i].ten).includes(str)) {
-    kQua.push(danhSach[i]);
-  }
-}
-
-console.log(kQua);
-console.log(text);
+getData();

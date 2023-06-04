@@ -283,6 +283,7 @@ main {
       .itemBg {
         a:hover img {
           transform: scale(1.2);
+          margin-top: -30px;
           transition: all 0.6s;
         }
         a:hover .light {
@@ -526,7 +527,7 @@ footer {
         flex-direction: column;
         .picture {
           width: 100%;
-          height: 280px;
+          // height: 280px;
         }
         .text {
           position: absolute;
@@ -537,22 +538,20 @@ footer {
           // height: 100px;
           .textTitle {
             h3 {
-              color: $mainTextColor;
+              color: $mainColor;
               margin: 0;
-              font-size: 14px;
-              font-weight: 400;
+              font-size: 16px;
             }
             p {
-              color: $mainTextColor;
+              color: $mainColor;
               margin: 0;
               font-size: 12px;
               font-weight: 400;
             }
             h2 {
-              color: $mainTextColor;
-              margin: 0;
+              color: $mainColor;
+              margin: 10px;
               font-size: 16px;
-              font-weight: 400;
             }
             button {
               padding: 5px 10px;
