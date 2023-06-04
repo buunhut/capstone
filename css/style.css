@@ -431,6 +431,7 @@ footer .mainFooter .endPage p {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  z-index: 6000;
 }
 
 .popUp {
