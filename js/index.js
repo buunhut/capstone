@@ -120,7 +120,7 @@ function getData() {
         `;
     });
     //đỗ dữ liệu cho carousel
-    // document.getElementById("carousel").innerHTML = carousel;
+    document.getElementById("carousel").innerHTML = carousel;
 
     console.log(data)
     var products = "";
