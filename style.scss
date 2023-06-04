@@ -520,6 +520,78 @@ footer {
     cursor: pointer;
   }
 }
+// detail
+.detailContent {
+  margin-top: 50px;
+  .detailItem {
+    display: flex;
+    align-items: start;
+    gap: 100px;
+    .detailImg {
+      width: 500px;
+      height: 500px;
+      img {
+        width: 100%;
+      }
+    }
+    .detaitTitle {
+      width: 500px;
+      h2 {
+        color: $mainColor;
+      }
+      p {
+        color: silver;
+        margin-bottom: 10px;
+      }
+      h3 {
+        color: $mainColor;
+      }
+      .size {
+        margin-top: 20px;
+        button {
+          width: 50px;
+          height: 40px;
+          margin: 5px 0 20px;
+          border: none;
+          background-color: red;
+          color: $mainTextColor;
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+      .qty {
+        margin-top: 10px;
+        button {
+          width: 30px;
+          height: 30px;
+          margin-top: 5px;
+          background-color: $mainColor;
+          color: $mainTextColor;
+          border: none;
+          border-radius: 100%;
+          font-size: 18px;
+          font-weight: 600;
+        }
+        input {
+          height: 30px;
+          width: 40px;
+          padding: 10px;
+        }
+      }
+      .addToCart {
+        margin-top: 20px;
+        button {
+          height: 40px;
+          width: 200px;
+          background-color: $mainColor;
+          color: $mainTextColor;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
 //responsive
 @media screen and (max-width: 576px) {
   .content {
@@ -618,24 +690,22 @@ footer {
       }
     }
   }
-}
 
-// detail
   .detailContent {
-    margin-top: 50px;
+    margin-top: 10px;
     .detailItem {
       display: flex;
-      align-items: start;
-      gap: 40px;
+      flex-direction: column;
+      justify-content: center;
       .detailImg {
-        width: 500px;
-        height: 500px;
+        width: 380px;
+        height: 380px;
         img {
           width: 100%;
         }
       }
       .detaitTitle {
-        width: 500px;
+        width: 380px;
         h2 {
           color: $mainColor;
         }
@@ -647,33 +717,30 @@ footer {
           color: $mainColor;
         }
         .size {
-          margin-top: 20px;
+          margin-top: 10px;
           button {
-            width: 50px;
-            height: 40px;
-            margin: 5px 0 20px;
+            width: 30px;
+            height: 30px;
+            margin: 5px 0 0;
             border: none;
             background-color: red;
             color: $mainTextColor;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 600;
-
-
           }
         }
         .qty {
           margin-top: 10px;
           button {
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             margin-top: 5px;
             background-color: $mainColor;
             color: $mainTextColor;
             border: none;
             border-radius: 100%;
-            font-size: 18px;
+            font-size: 14px;
             font-weight: 600;
-
           }
           input {
             height: 30px;
@@ -681,16 +748,19 @@ footer {
             padding: 10px;
           }
         }
-        .addToCart{
-          margin-top: 20px;
-          button{
-            height: 40px;
-            width: 200px;
+        .addToCart {
+          margin-top: 10px;
+          button {
+            height: 30px;
+            width: 160px;
             background-color: $mainColor;
             color: $mainTextColor;
-            font-size: 18px;
+            font-size: 16px;
+            border: none;
+            margin-bottom: 50px;
           }
         }
       }
     }
   }
+}

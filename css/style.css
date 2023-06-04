@@ -489,6 +489,77 @@ footer .mainFooter .endPage p {
   cursor: pointer;
 }
 
+.detailContent {
+  margin-top: 50px;
+}
+.detailContent .detailItem {
+  display: flex;
+  align-items: start;
+  gap: 100px;
+}
+.detailContent .detailItem .detailImg {
+  width: 500px;
+  height: 500px;
+}
+.detailContent .detailItem .detailImg img {
+  width: 100%;
+}
+.detailContent .detailItem .detaitTitle {
+  width: 500px;
+}
+.detailContent .detailItem .detaitTitle h2 {
+  color: rgb(35, 35, 100);
+}
+.detailContent .detailItem .detaitTitle p {
+  color: silver;
+  margin-bottom: 10px;
+}
+.detailContent .detailItem .detaitTitle h3 {
+  color: rgb(35, 35, 100);
+}
+.detailContent .detailItem .detaitTitle .size {
+  margin-top: 20px;
+}
+.detailContent .detailItem .detaitTitle .size button {
+  width: 50px;
+  height: 40px;
+  margin: 5px 0 20px;
+  border: none;
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+.detailContent .detailItem .detaitTitle .qty {
+  margin-top: 10px;
+}
+.detailContent .detailItem .detaitTitle .qty button {
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+  background-color: rgb(35, 35, 100);
+  color: white;
+  border: none;
+  border-radius: 100%;
+  font-size: 18px;
+  font-weight: 600;
+}
+.detailContent .detailItem .detaitTitle .qty input {
+  height: 30px;
+  width: 40px;
+  padding: 10px;
+}
+.detailContent .detailItem .detaitTitle .addToCart {
+  margin-top: 20px;
+}
+.detailContent .detailItem .detaitTitle .addToCart button {
+  height: 40px;
+  width: 200px;
+  background-color: rgb(35, 35, 100);
+  color: white;
+  font-size: 18px;
+}
+
 @media screen and (max-width: 576px) {
   .content {
     display: flex;
@@ -569,74 +640,76 @@ footer .mainFooter .endPage p {
   footer .mainFooter .footerContent .footerItem h3:first-child::before {
     display: none;
   }
-}
-.detailContent {
-  margin-top: 50px;
-}
-.detailContent .detailItem {
-  display: flex;
-  align-items: start;
-  gap: 40px;
-}
-.detailContent .detailItem .detailImg {
-  width: 500px;
-  height: 500px;
-}
-.detailContent .detailItem .detailImg img {
-  width: 100%;
-}
-.detailContent .detailItem .detaitTitle {
-  width: 500px;
-}
-.detailContent .detailItem .detaitTitle h2 {
-  color: rgb(35, 35, 100);
-}
-.detailContent .detailItem .detaitTitle p {
-  color: silver;
-  margin-bottom: 10px;
-}
-.detailContent .detailItem .detaitTitle h3 {
-  color: rgb(35, 35, 100);
-}
-.detailContent .detailItem .detaitTitle .size {
-  margin-top: 20px;
-}
-.detailContent .detailItem .detaitTitle .size button {
-  width: 50px;
-  height: 40px;
-  margin: 5px 0 20px;
-  border: none;
-  background-color: red;
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
-}
-.detailContent .detailItem .detaitTitle .qty {
-  margin-top: 10px;
-}
-.detailContent .detailItem .detaitTitle .qty button {
-  width: 30px;
-  height: 30px;
-  margin-top: 5px;
-  background-color: rgb(35, 35, 100);
-  color: white;
-  border: none;
-  border-radius: 100%;
-  font-size: 18px;
-  font-weight: 600;
-}
-.detailContent .detailItem .detaitTitle .qty input {
-  height: 30px;
-  width: 40px;
-  padding: 10px;
-}
-.detailContent .detailItem .detaitTitle .addToCart {
-  margin-top: 20px;
-}
-.detailContent .detailItem .detaitTitle .addToCart button {
-  height: 40px;
-  width: 200px;
-  background-color: rgb(35, 35, 100);
-  color: white;
-  font-size: 18px;
+  .detailContent {
+    margin-top: 10px;
+  }
+  .detailContent .detailItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .detailContent .detailItem .detailImg {
+    width: 380px;
+    height: 380px;
+  }
+  .detailContent .detailItem .detailImg img {
+    width: 100%;
+  }
+  .detailContent .detailItem .detaitTitle {
+    width: 380px;
+  }
+  .detailContent .detailItem .detaitTitle h2 {
+    color: rgb(35, 35, 100);
+  }
+  .detailContent .detailItem .detaitTitle p {
+    color: silver;
+    margin-bottom: 10px;
+  }
+  .detailContent .detailItem .detaitTitle h3 {
+    color: rgb(35, 35, 100);
+  }
+  .detailContent .detailItem .detaitTitle .size {
+    margin-top: 10px;
+  }
+  .detailContent .detailItem .detaitTitle .size button {
+    width: 30px;
+    height: 30px;
+    margin: 5px 0 0;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .detailContent .detailItem .detaitTitle .qty {
+    margin-top: 10px;
+  }
+  .detailContent .detailItem .detaitTitle .qty button {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    background-color: rgb(35, 35, 100);
+    color: white;
+    border: none;
+    border-radius: 100%;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .detailContent .detailItem .detaitTitle .qty input {
+    height: 30px;
+    width: 40px;
+    padding: 10px;
+  }
+  .detailContent .detailItem .detaitTitle .addToCart {
+    margin-top: 10px;
+  }
+  .detailContent .detailItem .detaitTitle .addToCart button {
+    height: 30px;
+    width: 160px;
+    background-color: rgb(35, 35, 100);
+    color: white;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 50px;
+  }
 }/*# sourceMappingURL=style.css.map */
