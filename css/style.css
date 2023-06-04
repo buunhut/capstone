@@ -437,7 +437,7 @@ footer .mainFooter .endPage p {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 400px;
+  width: 380px;
   height: 360px;
   transform: translate(-50%, -50%);
   z-index: 1000;
