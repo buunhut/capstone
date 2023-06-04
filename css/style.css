@@ -1,0 +1,564 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+li,
+a,
+span,
+form,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  font-family: "Oswald", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.none {
+  display: none;
+}
+
+.visibiliy {
+  visibility: hidden;
+}
+
+.height0 {
+  height: 0;
+  transition: all 0.3s;
+}
+
+.heightAuto {
+  height: auto;
+}
+
+.fixTop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  transition: all 1s;
+  height: 60px !important;
+  background-color: rgb(35, 35, 100) !important;
+}
+
+.fixTop.menu ul li a {
+  color: white;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 15px auto;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slick-prev:before {
+  color: red !important;
+}
+
+.slick-next:before {
+  color: blue !important;
+}
+
+header .headerTitle {
+  background-color: rgb(35, 35, 100);
+  height: 50px;
+}
+header .headerTitle .logo {
+  height: 50px;
+}
+header .headerTitle .logo a {
+  color: white;
+  font-size: 24px;
+  line-height: 50px;
+}
+header .headerTitle .cart {
+  display: flex;
+  align-items: center;
+}
+header .headerTitle .cart button {
+  background-color: rgb(35, 35, 100);
+  border: none;
+  color: white;
+  font-size: 20px;
+  height: 50px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+header .headerTitle .cart button:hover {
+  color: red;
+  transition: all 0.5s;
+}
+header .headerTitle .cart button i {
+  line-height: 50px;
+}
+header .headerTitle .cart .login {
+  height: 50px;
+}
+header .headerTitle .cart .login ul li {
+  display: inline-block;
+  line-height: 50px;
+  margin-left: 10px;
+}
+header .headerTitle .cart .login ul li a {
+  color: white;
+  font-size: 16px;
+}
+header .headerTitle .cart .login ul li a:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background-color: red;
+  display: block;
+  margin-top: -10px;
+}
+header .headerTitle .cart .login ul li a:hover {
+  color: red;
+  transition: all 0.5s;
+}
+header .headerTitle .cart .login ul li a:hover::after {
+  width: 100%;
+  transition: all 0.3s;
+}
+header .menu {
+  height: 80px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 30px;
+}
+header .menu nav ul {
+  display: flex;
+  justify-content: center;
+}
+header .menu nav ul li {
+  list-style: none;
+  margin: 0 20px;
+}
+header .menu nav ul li a {
+  color: rgb(35, 35, 100);
+  font-size: 20px;
+}
+header .menu nav ul li a:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background-color: red;
+  display: block;
+}
+header .menu nav ul li a:hover {
+  color: red;
+  transition: all 0.5s;
+}
+header .menu nav ul li a:hover::after {
+  width: 100%;
+  transition: all 0.3s;
+}
+
+main h1 {
+  text-align: center;
+  margin: 0 auto 20px;
+  display: inline-block;
+}
+main h1:after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: rgb(35, 35, 100);
+  display: block;
+}
+main .owl-carousel {
+  margin: 30px auto;
+}
+main .owl-carousel button.owl-prev span {
+  color: rgb(35, 35, 100) !important;
+  font-size: 60px;
+  position: absolute;
+  left: 20px;
+  top: 30%;
+}
+main .owl-carousel button.owl-next span {
+  color: rgb(35, 35, 100) !important;
+  font-size: 60px;
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  margin-top: 1px;
+}
+main .owl-carousel .carouselItem {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 250, 250);
+}
+main .owl-carousel .carouselItem .picture {
+  width: 60%;
+}
+main .owl-carousel .carouselItem .picture img {
+  width: 100%;
+  height: 440px;
+}
+main .owl-carousel .carouselItem .text {
+  width: 40%;
+  position: relative;
+}
+main .owl-carousel .carouselItem .text .textTitle {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .owl-carousel .carouselItem .text .textTitle h3 {
+  color: rgb(35, 35, 100);
+}
+main .owl-carousel .carouselItem .text .textTitle p {
+  margin-top: 5px;
+}
+main .owl-carousel .carouselItem .text .textTitle h2 {
+  margin-top: 20px;
+  color: rgb(35, 35, 100);
+}
+main .owl-carousel .carouselItem .text .textTitle button {
+  background-color: rgb(35, 35, 100);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 18px;
+}
+main .owl-carousel .carouselItem .text .textTitle button:last-child {
+  background-color: white;
+  color: rgb(35, 35, 100);
+  border: 2px solid rgb(35, 35, 100);
+}
+main .products {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+main .products .productItem {
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+main .products .productItem .itemBg {
+  width: 306px;
+}
+main .products .productItem .itemBg a:hover img {
+  transform: scale(1.2);
+  transition: all 0.6s;
+}
+main .products .productItem .itemBg a:hover .light {
+  left: 150%;
+}
+main .products .productItem .itemBg a:hover .overlay {
+  opacity: 1;
+}
+main .products .productItem .itemBg .itemImg {
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+}
+main .products .productItem .itemBg .itemImg img {
+  width: 100%;
+  transition: all 0.1s;
+}
+main .products .productItem .itemBg .itemImg .light {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  display: block;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  transform: skewX(-30deg);
+  transition: all 0.6s;
+}
+main .products .productItem .itemBg .itemImg .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+main .products .productItem .itemBg .itemText {
+  padding: 0 20px;
+}
+main .products .productItem .itemBg .itemText .itemName {
+  margin-top: 10px;
+  font: 18px;
+  color: rgb(35, 35, 100);
+}
+main .products .productItem .itemBg .itemText .itemDescription {
+  margin-top: 10px;
+  color: silver;
+}
+main .products .productItem .itemBg .itemButton {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+main .products .productItem .itemBg .itemButton button {
+  width: 50%;
+  background-color: rgb(35, 35, 100);
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  height: 40px;
+  cursor: pointer;
+  border: 2px solid rgb(35, 35, 100);
+  border-radius: 12px 0 0 0;
+}
+main .products .productItem .itemBg .itemButton button:hover {
+  background-color: rgb(25, 25, 180);
+  border: 2px solid rgb(25, 25, 180);
+}
+main .products .productItem .itemBg .itemButton h3 {
+  width: 50%;
+  color: rgb(35, 35, 100);
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 0 0 12px 0;
+  border: 2px solid rgb(35, 35, 100);
+}
+
+footer .mainFooter {
+  background-color: rgb(255, 250, 250);
+}
+footer .mainFooter .footerContent {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+footer .mainFooter .footerContent .footerItem h3 {
+  color: rgb(35, 35, 100);
+}
+footer .mainFooter .footerContent .footerItem h3:after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: rgb(35, 35, 100);
+  display: block;
+  margin-top: 2px;
+}
+footer .mainFooter .footerContent .footerItem ul li {
+  list-style: none;
+  margin: 10px 0 0 5px;
+}
+footer .mainFooter .footerContent .footerItem ul li a {
+  font-size: 18px;
+  color: rgb(35, 35, 100);
+}
+footer .mainFooter .footerContent .footerItem ul li a i {
+  width: 20px;
+}
+footer .mainFooter .footerContent .footerItem ul li a:hover {
+  color: red;
+  transition: all 0.5s;
+}
+footer .mainFooter .footerContent .followUs a i {
+  width: 30px;
+  height: 30px;
+  color: white;
+  background-color: rgb(35, 35, 100);
+  text-align: center;
+  line-height: 30px;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+footer .mainFooter .footerContent .followUs a i:hover {
+  background-color: rgb(25, 25, 180);
+  transition: all 0.5s;
+}
+footer .mainFooter .endPage {
+  height: 50px;
+  background-color: rgb(35, 35, 100);
+  text-align: center;
+}
+footer .mainFooter .endPage p {
+  line-height: 50px;
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+#backToTop {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(35, 35, 100);
+  color: white;
+  position: fixed;
+  right: 10px;
+  bottom: 60px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.popUp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 360px;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.popUp h1 {
+  color: rgb(35, 35, 100);
+  text-align: center;
+}
+.popUp h3 {
+  text-align: center;
+  color: red;
+}
+.popUp p {
+  color: rgb(35, 35, 100);
+  text-align: center;
+}
+.popUp img {
+  width: 100%;
+  height: 200px;
+  background-color: azure;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.popUp i.closer {
+  background-color: red;
+  border-radius: 100%;
+  color: white;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-3px, 3px);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  main .owl-carousel .carouselItem {
+    position: relative;
+    flex-direction: column;
+  }
+  main .owl-carousel .carouselItem .picture {
+    width: 100%;
+    height: 280px;
+  }
+  main .owl-carousel .carouselItem .text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-60px);
+    width: 100%;
+  }
+  main .owl-carousel .carouselItem .text .textTitle h3 {
+    color: white;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  main .owl-carousel .carouselItem .text .textTitle p {
+    color: white;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  main .owl-carousel .carouselItem .text .textTitle h2 {
+    color: white;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  main .owl-carousel .carouselItem .text .textTitle button {
+    padding: 5px 10px;
+    margin-top: 0;
+    font-size: 12px;
+  }
+  main .container {
+    padding: 0 10px;
+  }
+  main .container h1 {
+    font-size: 24px;
+    margin: 20px auto;
+    display: block;
+  }
+  main .container h1:after {
+    display: none;
+  }
+  main .container .products {
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer .mainFooter .footerContent {
+    flex-direction: column;
+    padding: 20px 20px;
+  }
+  footer .mainFooter .footerContent .footerItem {
+    margin-top: 20px;
+  }
+  footer .mainFooter .footerContent .footerItem h3 {
+    color: rgb(35, 35, 100);
+  }
+  footer .mainFooter .footerContent .footerItem h3:after {
+    display: none;
+  }
+  footer .mainFooter .footerContent .footerItem h3:before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: rgb(35, 35, 100);
+    display: block;
+  }
+  footer .mainFooter .footerContent .footerItem h3:first-child::before {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
