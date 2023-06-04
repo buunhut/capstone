@@ -26,7 +26,7 @@ if (questionMarkIndex !== -1) {
 }
 
 
-function getData() {
+function getDataDetail() {
     var promise = axios({
       url: "https://shop.cyberlearn.vn/api/Product/getbyid?id=" + id,
       method: "GET",
@@ -87,5 +87,5 @@ function getData() {
     });
   }
   
-  getData();
+  getDataDetail();
   

@@ -1,5 +1,3 @@
-
-
 var danhSach = [
   {
     ten: "chịa",
@@ -88,6 +86,10 @@ function boDauTiengViet(str) {
 //     "./img/bg5.jpg",
 // ]
 
+
+
+
+
 function getData() {
   var promise = axios({
     url: "https://shop.cyberlearn.vn/api/Product",
@@ -99,30 +101,33 @@ function getData() {
     data = res.data.content;
     carousel = "";
 
-    data.forEach(function (item) {
-      carousel += `
+    for(var i = 0; i < 4; i++){
+      carousel += `       
+
         <div class="owl-item">
             <div class="carouselItem">
                 <div class="picture">
-                    <img src="${item.image}" alt="">
+                    <img src="${data[i].image}" alt="">
                 </div>
                 <div class="text">
                     <div class="textTitle">
-                        <h3>${item.name}</h3>
-                        <p>${item.shortDescription}</p>
-                        <h2>$ ${item.price}</h2>
+                        <h3>${data[i].name}</h3>
+                        <p>${data[i].shortDescription}</p>
+                        <h2>$ ${data[i].price}</h2>
                         <button onclick="buyNow()">Buy now</button>
-                        <button><a id="detail" href="./detail.html">Detail</a></button>
+                        <button><a id="detail" href="./detail.html?id=${data[i].id}&name=${data[i].name}" onclick="detail(${data[i].id})">Detail</a></button>
                     </div>
                 </div>
             </div>
         </div>
-        `;
-    });
-    //đỗ dữ liệu cho carousel
+      `;
+    }
+    
+
+    console.log(carousel)
     document.getElementById("carousel").innerHTML = carousel;
 
-    console.log(data)
+    console.log(data);
     var products = "";
     data.forEach(function (item) {
       products += `
@@ -156,10 +161,6 @@ function getData() {
     });
     // đổ sản phẩm ra ngoài
     document.getElementById("products").innerHTML = products;
-
-
-
-
   });
 
   //   kết nối API lỗi
@@ -169,4 +170,5 @@ function getData() {
 }
 
 getData();
+
 

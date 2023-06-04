@@ -73,14 +73,6 @@ body {
   align-items: center;
 }
 
-.slick-prev:before {
-  color: red !important;
-}
-
-.slick-next:before {
-  color: blue !important;
-}
-
 header .headerTitle {
   background-color: rgb(35, 35, 100);
   height: 50px;
@@ -190,17 +182,14 @@ main h1:after {
   background-color: rgb(35, 35, 100);
   display: block;
 }
-main .owl-carousel {
-  margin: 30px auto;
-}
-main .owl-carousel button.owl-prev span {
+main button.owl-prev span {
   color: rgb(35, 35, 100) !important;
   font-size: 60px;
   position: absolute;
   left: 20px;
   top: 30%;
 }
-main .owl-carousel button.owl-next span {
+main button.owl-next span {
   color: rgb(35, 35, 100) !important;
   font-size: 60px;
   position: absolute;
@@ -208,25 +197,26 @@ main .owl-carousel button.owl-next span {
   top: 30%;
   margin-top: 1px;
 }
-main .owl-carousel .carouselItem {
+main .carouselItem {
+  margin: 30px auto;
   display: flex;
   justify-content: space-between;
   background-color: rgba(191, 180, 205, 0.098);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
-main .owl-carousel .carouselItem .picture {
+main .carouselItem .picture {
   width: 500px;
   margin: 0 auto;
 }
-main .owl-carousel .carouselItem .picture img {
+main .carouselItem .picture img {
   width: 100%;
   height: 440px;
 }
-main .owl-carousel .carouselItem .text {
+main .carouselItem .text {
   width: 40%;
   position: relative;
 }
-main .owl-carousel .carouselItem .text .textTitle {
+main .carouselItem .text .textTitle {
   width: 100%;
   text-align: center;
   position: absolute;
@@ -235,17 +225,17 @@ main .owl-carousel .carouselItem .text .textTitle {
   transform: translate(-50%, -50%);
   z-index: 7000;
 }
-main .owl-carousel .carouselItem .text .textTitle h3 {
+main .carouselItem .text .textTitle h3 {
   color: rgb(35, 35, 100);
 }
-main .owl-carousel .carouselItem .text .textTitle p {
+main .carouselItem .text .textTitle p {
   margin-top: 5px;
 }
-main .owl-carousel .carouselItem .text .textTitle h2 {
+main .carouselItem .text .textTitle h2 {
   margin-top: 20px;
   color: rgb(35, 35, 100);
 }
-main .owl-carousel .carouselItem .text .textTitle button {
+main .carouselItem .text .textTitle button {
   background-color: rgb(35, 35, 100);
   color: white;
   padding: 10px 20px;
@@ -254,12 +244,12 @@ main .owl-carousel .carouselItem .text .textTitle button {
   font-size: 18px;
   cursor: pointer;
 }
-main .owl-carousel .carouselItem .text .textTitle button:last-child {
+main .carouselItem .text .textTitle button:last-child {
   background-color: white;
   color: rgb(35, 35, 100);
   border: 2px solid rgb(35, 35, 100);
 }
-main .owl-carousel .carouselItem .text .textTitle button a {
+main .carouselItem .text .textTitle button a {
   color: rgb(35, 35, 100);
   font-weight: 600;
 }
@@ -566,37 +556,37 @@ footer .mainFooter .endPage p {
     justify-content: space-around;
     align-items: center;
   }
-  main .owl-carousel .carouselItem {
+  main .carouselItem {
     position: relative;
     flex-direction: column;
   }
-  main .owl-carousel .carouselItem .picture {
+  main .carouselItem .picture {
     width: 380px;
   }
-  main .owl-carousel .carouselItem .text {
+  main .carouselItem .text {
     position: absolute;
     bottom: 0;
     left: 0;
     transform: translateY(-60px);
     width: 100%;
   }
-  main .owl-carousel .carouselItem .text .textTitle h3 {
+  main .carouselItem .text .textTitle h3 {
     color: rgb(35, 35, 100);
     margin: 0;
     font-size: 16px;
   }
-  main .owl-carousel .carouselItem .text .textTitle p {
+  main .carouselItem .text .textTitle p {
     color: rgb(35, 35, 100);
     margin: 0;
     font-size: 12px;
     font-weight: 400;
   }
-  main .owl-carousel .carouselItem .text .textTitle h2 {
+  main .carouselItem .text .textTitle h2 {
     color: rgb(35, 35, 100);
     margin: 10px;
     font-size: 16px;
   }
-  main .owl-carousel .carouselItem .text .textTitle button {
+  main .carouselItem .text .textTitle button {
     padding: 5px 10px;
     margin-top: 0;
     font-size: 12px;

@@ -66,12 +66,6 @@ $hoverBt: rgb(25, 25, 180);
   justify-content: space-between;
   align-items: center;
 }
-.slick-prev:before {
-  color: red !important;
-}
-.slick-next:before {
-  color: blue !important;
-}
 // header
 header {
   .headerTitle {
@@ -190,87 +184,81 @@ main {
       display: block;
     }
   }
-  .owl-carousel {
-    button.owl-prev {
-      span {
-        color: $mainColor !important;
+  button.owl-prev {
+    span {
+      color: $mainColor !important;
 
-        font-size: 60px;
-        position: absolute;
-        left: 20px;
-        top: 30%;
-      }
+      font-size: 60px;
+      position: absolute;
+      left: 20px;
+      top: 30%;
     }
-    button.owl-next {
-      span {
-        color: $mainColor !important;
-        font-size: 60px;
-        position: absolute;
-        right: 20px;
-        top: 30%;
-        margin-top: 1px;
-      }
+  }
+  button.owl-next {
+    span {
+      color: $mainColor !important;
+      font-size: 60px;
+      position: absolute;
+      right: 20px;
+      top: 30%;
+      margin-top: 1px;
     }
+  }
+  .carouselItem {
     margin: 30px auto;
-    // padding: 40px 0;
-    // border: 1px solid black;
-    // background-color: red;
-    // width: 900px;
-    // overflow: hidden;
-    .carouselItem {
-      display: flex;
-      justify-content: space-between;
-      background-color: rgba(191, 180, 205, 0.098);
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-      // padding: 20px;
-      .picture {
-        width: 500px;
-        margin: 0 auto;
-        img {
-          width: 100%;
-          height: 440px;
-        }
+
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(191, 180, 205, 0.098);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    // padding: 20px;
+    .picture {
+      width: 500px;
+      margin: 0 auto;
+      img {
+        width: 100%;
+        height: 440px;
       }
-      .text {
-        width: 40%;
-        position: relative;
-        .textTitle {
-          width: 100%;
-          // height: 300px;
-          text-align: center;
-          // background-color: beige;;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          z-index: 7000;
-          h3 {
+    }
+    .text {
+      width: 40%;
+      position: relative;
+      .textTitle {
+        width: 100%;
+        // height: 300px;
+        text-align: center;
+        // background-color: beige;;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 7000;
+        h3 {
+          color: $mainColor;
+        }
+        p {
+          margin-top: 5px;
+        }
+        h2 {
+          margin-top: 20px;
+          color: $mainColor;
+        }
+        button {
+          background-color: $mainColor;
+          color: $mainTextColor;
+          padding: 10px 20px;
+          border-radius: 10px;
+          margin-top: 10px;
+          font-size: 18px;
+          cursor: pointer;
+          &:last-child {
+            background-color: $mainTextColor;
             color: $mainColor;
+            border: 2px solid $mainColor;
           }
-          p {
-            margin-top: 5px;
-          }
-          h2 {
-            margin-top: 20px;
+          a {
             color: $mainColor;
-          }
-          button {
-            background-color: $mainColor;
-            color: $mainTextColor;
-            padding: 10px 20px;
-            border-radius: 10px;
-            margin-top: 10px;
-            font-size: 18px;
-            cursor: pointer;
-            &:last-child {
-              background-color: $mainTextColor;
-              color: $mainColor;
-              border: 2px solid $mainColor;
-            }
-            a {
-              color: $mainColor;
-              font-weight: 600;
-            }
+            font-weight: 600;
           }
         }
       }
@@ -601,44 +589,42 @@ footer {
   }
   // main
   main {
-    .owl-carousel {
-      .carouselItem {
-        position: relative;
-        flex-direction: column;
-        .picture {
-          width: 380px;
-          // height: 280px;
-        }
-        .text {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          transform: translateY(-60px);
-          width: 100%;
-          // height: 100px;
-          .textTitle {
-            h3 {
-              color: $mainColor;
-              margin: 0;
-              font-size: 16px;
-            }
-            p {
-              color: $mainColor;
-              margin: 0;
-              font-size: 12px;
-              font-weight: 400;
-            }
-            h2 {
-              color: $mainColor;
-              margin: 10px;
-              font-size: 16px;
-            }
-            button {
-              padding: 5px 10px;
-              margin-top: 0;
-              font-size: 12px;
-              margin-bottom: 20px;
-            }
+    .carouselItem {
+      position: relative;
+      flex-direction: column;
+      .picture {
+        width: 380px;
+        // height: 280px;
+      }
+      .text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(-60px);
+        width: 100%;
+        // height: 100px;
+        .textTitle {
+          h3 {
+            color: $mainColor;
+            margin: 0;
+            font-size: 16px;
+          }
+          p {
+            color: $mainColor;
+            margin: 0;
+            font-size: 12px;
+            font-weight: 400;
+          }
+          h2 {
+            color: $mainColor;
+            margin: 10px;
+            font-size: 16px;
+          }
+          button {
+            padding: 5px 10px;
+            margin-top: 0;
+            font-size: 12px;
+            margin-bottom: 20px;
           }
         }
       }
