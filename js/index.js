@@ -132,7 +132,7 @@ function getData() {
                         <p>${item.shortDescription}</p>
                         <h2>$ ${item.price}</h2>
                         <button onclick="buyNow()">Buy now</button>
-                        <button><a href="./detail.html"></a> Detail</button>
+                        <button><a id="detail" href="./detail.html">Detail</a></button>
                     </div>
                 </div>
             </div>

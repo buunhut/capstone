@@ -393,11 +393,33 @@
 
             $(document).ready(function () {
                 $(".owl-carousel").owlCarousel({
-                    items: 2,
+                    // responsive: {
+                    //     // Khi kích thước cửa sổ nhỏ hơn hoặc bằng 768px
+                    //     0: {
+                    //         items: 1 // Chỉ hiển thị 1 mục
+                    //     },
+                    //     // Khi kích thước cửa sổ nhỏ hơn hoặc bằng 992px
+                    //     768: {
+                    //         items: 2 // Hiển thị 2 mục
+                    //     },
+                    //     // Khi kích thước cửa sổ nhỏ hơn hoặc bằng 1200px
+                    //     992: {
+                    //         items: 2 // Hiển thị 3 mục
+                    //     },
+                    //     // Khi kích thước cửa sổ lớn hơn 1200px
+                    //     1200: {
+                    //         items: 2 // Hiển thị 4 mục
+                    //     },
+                    //     1400: {
+                    //         items: 2 // Hiển thị 4 mục
+                    //     }
+                    // },
+                    items: 1,
                     loop: true,
                     autoplay: true,
                     nav: true,
-                    margin: 40,
+                    dots: false,
+                    // margin: 40,
 
 
                     // animateOut: 'slideOutDown',
@@ -405,27 +427,6 @@
                     // stagePadding: 30,
                     // smartSpeed: 450,
 
-                    responsive: {
-                        // Khi kích thước cửa sổ nhỏ hơn hoặc bằng 768px
-                        0: {
-                            items: 1 // Chỉ hiển thị 1 mục
-                        },
-                        // Khi kích thước cửa sổ nhỏ hơn hoặc bằng 992px
-                        768: {
-                            items: 2 // Hiển thị 2 mục
-                        },
-                        // Khi kích thước cửa sổ nhỏ hơn hoặc bằng 1200px
-                        992: {
-                            items: 2 // Hiển thị 3 mục
-                        },
-                        // Khi kích thước cửa sổ lớn hơn 1200px
-                        1200: {
-                            items: 2 // Hiển thị 4 mục
-                        },
-                        1400: {
-                            items: 2 // Hiển thị 4 mục
-                        }
-                    }
 
 
 

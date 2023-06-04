@@ -211,10 +211,12 @@ main .owl-carousel button.owl-next span {
 main .owl-carousel .carouselItem {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(255, 250, 250);
+  background-color: rgba(191, 180, 205, 0.098);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 main .owl-carousel .carouselItem .picture {
-  width: 60%;
+  width: 500px;
+  margin: 0 auto;
 }
 main .owl-carousel .carouselItem .picture img {
   width: 100%;
@@ -231,6 +233,7 @@ main .owl-carousel .carouselItem .text .textTitle {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 7000;
 }
 main .owl-carousel .carouselItem .text .textTitle h3 {
   color: rgb(35, 35, 100);
@@ -249,11 +252,16 @@ main .owl-carousel .carouselItem .text .textTitle button {
   border-radius: 10px;
   margin-top: 10px;
   font-size: 18px;
+  cursor: pointer;
 }
 main .owl-carousel .carouselItem .text .textTitle button:last-child {
   background-color: white;
   color: rgb(35, 35, 100);
   border: 2px solid rgb(35, 35, 100);
+}
+main .owl-carousel .carouselItem .text .textTitle button a {
+  color: rgb(35, 35, 100);
+  font-weight: 600;
 }
 main .products {
   display: flex;
@@ -431,7 +439,6 @@ footer .mainFooter .endPage p {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  z-index: 6000;
 }
 
 .popUp {
@@ -446,6 +453,7 @@ footer .mainFooter .endPage p {
   padding: 20px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  display: none;
 }
 .popUp h1 {
   color: rgb(35, 35, 100);
@@ -521,6 +529,7 @@ footer .mainFooter .endPage p {
     padding: 5px 10px;
     margin-top: 0;
     font-size: 12px;
+    margin-bottom: 20px;
   }
   main .container {
     padding: 0 10px;
