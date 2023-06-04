@@ -25,6 +25,9 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
             integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
         <!-- link css -->
         <link rel="stylesheet" href="./css/style.css">
 
@@ -76,14 +79,49 @@
                     </div>
                 </div>
             </div> -->
+            <!-- products -->
+            <div class="container">
+                <div class="products">
+                    <div class="detailContent">
+                        <h1>Products detail</h1>
+                        <div class="detailItem"  id="detail">
+                            <!-- <div class="detailImg">
+                                <img src="./img/bg2.jpg" alt="">
+                            </div>
+                            <div class="detaitTitle">
+                                <h2>Product name:</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt rem itaque
+                                    assumenda, amet magnam consequatur doloribus natus quia dolorum ut?</p>
+                                <h2>Price: $100</h2>
+                                <div class="size">
+                                    <h3>Your size</h3>
 
+                                    <button type="button" onclick="choseSize()">39</button>
+                                    <button type="button" onclick="choseSize()">40</button>
+                                    <button type="button" onclick="choseSize()">41</button>
+                                    <button type="button" onclick="choseSize()">42</button>
+                                </div>
+                                <div class="qty">
+                                    <h3>Qty:</h3>
+                                    <button type="button" onclick="giam()">-</button>
+                                    <input type="text" value="1" name="" id="qty">
+                                    <button type="button" onclick="tang()">+</button>
+                                </div>
+                                <div class="addToCart">
+                                    <button type="button" onclick="addToCart()">Add to cart</button>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
             <!-- products -->
             <div class="container">
-                <h1>Products feature</h1>
-                <div class="products" id="products">
+                <h1>Reatale products</h1>
+                <div class="products" id="Reatale">
 
                 </div>
             </div>
@@ -207,66 +245,10 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-
         <script src="./js/menu.js"></script>
         <script src="./js/detail.js"></script>
-        <script src="./js/index.js"></script>
-
-        <script>
-            // $(document).ready(function () {
-            //     $('.carousel').slick({
-            //         autoplay: false,
-            //         autoplaySpeed: 1000,
-
-            //     });
-            // });
 
 
-            $(document).ready(function () {
-                $(".owl-carousel").owlCarousel({
-                    // responsive: {
-                    //     // Khi kích thước cửa sổ nhỏ hơn hoặc bằng 768px
-                    //     0: {
-                    //         items: 1 // Chỉ hiển thị 1 mục
-                    //     },
-                    //     // Khi kích thước cửa sổ nhỏ hơn hoặc bằng 992px
-                    //     768: {
-                    //         items: 2 // Hiển thị 2 mục
-                    //     },
-                    //     // Khi kích thước cửa sổ nhỏ hơn hoặc bằng 1200px
-                    //     992: {
-                    //         items: 2 // Hiển thị 3 mục
-                    //     },
-                    //     // Khi kích thước cửa sổ lớn hơn 1200px
-                    //     1200: {
-                    //         items: 2 // Hiển thị 4 mục
-                    //     },
-                    //     1400: {
-                    //         items: 2 // Hiển thị 4 mục
-                    //     }
-                    // },
-                    items: 1,
-                    loop: true,
-                    autoplay: true,
-                    nav: true,
-                    dots: false,
-                    // margin: 40,
-
-
-                    // animateOut: 'slideOutDown',
-                    // animateIn: 'flipInX',
-                    // stagePadding: 30,
-                    // smartSpeed: 450,
-
-
-
-
-
-
-
-                });
-            });
-        </script>
     </body>
 
     </html>

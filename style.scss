@@ -59,7 +59,7 @@ $hoverBt: rgb(25, 25, 180);
 }
 .container {
   max-width: 1400px;
-  margin: 15px auto;
+  margin: 0 auto;
 }
 .content {
   display: flex;
@@ -209,7 +209,6 @@ main {
         right: 20px;
         top: 30%;
         margin-top: 1px;
-
       }
     }
     margin: 30px auto;
@@ -225,7 +224,7 @@ main {
       box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
       // padding: 20px;
       .picture {
-        width:500px;
+        width: 500px;
         margin: 0 auto;
         img {
           width: 100%;
@@ -262,13 +261,13 @@ main {
             border-radius: 10px;
             margin-top: 10px;
             font-size: 18px;
-            cursor: pointer;            
+            cursor: pointer;
             &:last-child {
               background-color: $mainTextColor;
               color: $mainColor;
               border: 2px solid $mainColor;
             }
-            a{
+            a {
               color: $mainColor;
               font-weight: 600;
             }
@@ -567,8 +566,6 @@ footer {
               margin-top: 0;
               font-size: 12px;
               margin-bottom: 20px;
-  
-
             }
           }
         }
@@ -622,3 +619,78 @@ footer {
     }
   }
 }
+
+// detail
+  .detailContent {
+    margin-top: 50px;
+    .detailItem {
+      display: flex;
+      align-items: start;
+      gap: 40px;
+      .detailImg {
+        width: 500px;
+        height: 500px;
+        img {
+          width: 100%;
+        }
+      }
+      .detaitTitle {
+        width: 500px;
+        h2 {
+          color: $mainColor;
+        }
+        p {
+          color: silver;
+          margin-bottom: 10px;
+        }
+        h3 {
+          color: $mainColor;
+        }
+        .size {
+          margin-top: 20px;
+          button {
+            width: 50px;
+            height: 40px;
+            margin: 5px 0 20px;
+            border: none;
+            background-color: red;
+            color: $mainTextColor;
+            font-size: 16px;
+            font-weight: 600;
+
+
+          }
+        }
+        .qty {
+          margin-top: 10px;
+          button {
+            width: 30px;
+            height: 30px;
+            margin-top: 5px;
+            background-color: $mainColor;
+            color: $mainTextColor;
+            border: none;
+            border-radius: 100%;
+            font-size: 18px;
+            font-weight: 600;
+
+          }
+          input {
+            height: 30px;
+            width: 40px;
+            padding: 10px;
+          }
+        }
+        .addToCart{
+          margin-top: 20px;
+          button{
+            height: 40px;
+            width: 200px;
+            background-color: $mainColor;
+            color: $mainTextColor;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
