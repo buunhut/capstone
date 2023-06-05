@@ -1,95 +1,3 @@
-var danhSach = [
-  {
-    ten: "chịa",
-    tuoi: 24,
-    diachi: "bạc liêu",
-  },
-  {
-    ten: "quyền",
-    tuoi: 38,
-    diachi: "tiền giang",
-  },
-  {
-    ten: "kiều",
-    tuoi: 26,
-    diachi: "sóc trăng",
-  },
-  {
-    ten: "đoàn",
-    tuoi: 32,
-    diachi: "đức",
-  },
-  {
-    ten: "tú",
-    tuoi: 40,
-    diachi: "hcm",
-  },
-  {
-    ten: "anh",
-    tuoi: 38,
-    diachi: "hcm",
-  },
-  {
-    ten: "thanh",
-    tuoi: 38,
-    diachi: "hcm",
-  },
-];
-/*
-//sort từ a đến z
-function sapXepAz(danhsach) {
-  danhsach.sort(function (a, b) {
-    return boDauTiengViet(a.ten).localeCompare(boDauTiengViet(b.ten));
-  });
-  return danhsach;
-}
-//sort từ z đến a
-function sapXepZa(danhsach) {
-  danhsach.sort(function (a, b) {
-    return boDauTiengViet(a.ten).localeCompare(boDauTiengViet(b.ten));
-  });
-  return danhsach.reverse();
-}
-sapXepAz(danhSach);
-console.log(danhSach);
-
-function boDauTiengViet(str) {
-  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-}
-// text = "Tôi là Trương Bửu Nhựt, đang sinh sống và làm việc tại THÀNH PHỐ HỐ CHÍ MINH"
-// //bỏ dấu tiếng việt
-// var ketQua = boDauTiengViet(text);
-// console.log(ketQua);
-*/
-// function boDauTiengViet(str) {
-//   return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-// }
-
-// var input = "thành";
-// var str = boDauTiengViet(input);
-// var kQua = [];
-// for (let i = 0; i < danhSach.length; i++) {
-//   if (boDauTiengViet(danhSach[i].ten).includes(str)) {
-//     kQua.push(danhSach[i]);
-//   }
-// }
-
-// console.log(kQua);
-// console.log(text);
-
-// đỗ dữ liệu cho carousel
-// var data = [
-//     "./img/bg1.jpg",
-//     "./img/bg2.jpg",
-//     "./img/bg3.jpg",
-//     "./img/bg4.jpg",
-//     "./img/bg5.jpg",
-// ]
-
-
-
-
-
 function getData() {
   var promise = axios({
     url: "https://shop.cyberlearn.vn/api/Product",
@@ -100,9 +8,9 @@ function getData() {
   promise.then(function (res) {
     data = res.data.content;
 
-     localStorage.setItem('carousel', JSON.stringify(data)); 
-    
+    console.log(data);
 
+    localStorage.setItem("carousel", JSON.stringify(data));
 
     console.log(data);
     var products = "";
@@ -146,13 +54,12 @@ function getData() {
   });
 }
 
+var carouselLocal = JSON.parse(localStorage.getItem("carousel"));
 
-var carouselLocal = JSON.parse(localStorage.getItem('carousel'));
-
-console.log(carouselLocal)
+console.log(carouselLocal);
 carousel = "";
 
-for(var i = 0; i < carouselLocal.length ; i++){
+for (var i = 0; i < carouselLocal.length; i++) {
   carousel += `       
     <div class="owl-item">
         <div class="carouselItem">
@@ -173,14 +80,8 @@ for(var i = 0; i < carouselLocal.length ; i++){
   `;
 }
 
-console.log(carousel)
+console.log(carousel);
 // console.log(document.getElementById("carousel"))
 document.getElementById("carousel").innerHTML = carousel;
 
-
-window.onload= function(){
-  getData();
-}
-
-
-
+getData();

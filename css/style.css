@@ -63,8 +63,9 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .content {
@@ -184,6 +185,7 @@ main h1:after {
 }
 main button.owl-prev span {
   color: rgb(35, 35, 100) !important;
+  opacity: 0.2;
   font-size: 60px;
   position: absolute;
   left: 20px;
@@ -191,6 +193,7 @@ main button.owl-prev span {
 }
 main button.owl-next span {
   color: rgb(35, 35, 100) !important;
+  opacity: 0.2;
   font-size: 60px;
   position: absolute;
   right: 20px;
@@ -201,8 +204,6 @@ main .carouselItem {
   margin: 30px auto;
   display: flex;
   justify-content: space-between;
-  background-color: rgba(191, 180, 205, 0.098);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 main .carouselItem .picture {
   width: 500px;
@@ -210,7 +211,7 @@ main .carouselItem .picture {
 }
 main .carouselItem .picture img {
   width: 100%;
-  height: 440px;
+  height: 500px;
 }
 main .carouselItem .text {
   width: 40%;
@@ -227,35 +228,37 @@ main .carouselItem .text .textTitle {
 }
 main .carouselItem .text .textTitle h3 {
   color: rgb(35, 35, 100);
+  margin-top: 20px;
 }
 main .carouselItem .text .textTitle p {
-  margin-top: 5px;
+  width: 300px;
+  margin: 5px auto 0;
 }
 main .carouselItem .text .textTitle h2 {
-  margin-top: 20px;
+  margin-top: 10px;
   color: rgb(35, 35, 100);
 }
 main .carouselItem .text .textTitle button {
   background-color: rgb(35, 35, 100);
   color: white;
-  padding: 10px 20px;
+  padding: 5px 20px;
   border-radius: 10px;
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
 }
 main .carouselItem .text .textTitle button:last-child {
   background-color: white;
   color: rgb(35, 35, 100);
-  border: 2px solid rgb(35, 35, 100);
+  border: 1px solid rgb(35, 35, 100);
 }
 main .carouselItem .text .textTitle button a {
   color: rgb(35, 35, 100);
-  font-weight: 600;
+  font-weight: 400;
 }
 main .products {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
@@ -268,8 +271,6 @@ main .products .productItem {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 main .products .productItem .itemBg a:hover img {
-  transform: scale(1.2);
-  margin-top: -30px;
   transition: all 0.6s;
 }
 main .products .productItem .itemBg a:hover .light {
@@ -490,14 +491,14 @@ footer .mainFooter .endPage p {
   gap: 100px;
 }
 .detailContent .detailItem .detailImg {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
 }
 .detailContent .detailItem .detailImg img {
   width: 100%;
 }
 .detailContent .detailItem .detaitTitle {
-  width: 500px;
+  width: 400px;
 }
 .detailContent .detailItem .detaitTitle h2 {
   color: rgb(35, 35, 100);
@@ -505,6 +506,7 @@ footer .mainFooter .endPage p {
 .detailContent .detailItem .detaitTitle p {
   color: silver;
   margin-bottom: 10px;
+  width: 300px;
 }
 .detailContent .detailItem .detaitTitle h3 {
   color: rgb(35, 35, 100);
@@ -513,14 +515,14 @@ footer .mainFooter .endPage p {
   margin-top: 20px;
 }
 .detailContent .detailItem .detaitTitle .size button {
-  width: 50px;
-  height: 40px;
+  width: 40px;
+  height: 30px;
   margin: 5px 0 20px;
   border: none;
   background-color: red;
   color: white;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
 }
 .detailContent .detailItem .detaitTitle .size button:hover {
@@ -598,16 +600,16 @@ footer .mainFooter .endPage p {
     color: rgb(35, 35, 100);
     margin: 0;
     font-size: 16px;
+    margin-top: 20px;
   }
   main .carouselItem .text .textTitle p {
     color: rgb(35, 35, 100);
-    margin: 0;
     font-size: 12px;
     font-weight: 400;
   }
   main .carouselItem .text .textTitle h2 {
     color: rgb(35, 35, 100);
-    margin: 10px;
+    margin: 5px;
     font-size: 16px;
   }
   main .carouselItem .text .textTitle button {
@@ -685,6 +687,95 @@ footer .mainFooter .endPage p {
   footer .mainFooter .footerContent .followUs a i:hover {
     background-color: rgb(25, 25, 180);
     transition: all 0.5s;
+  }
+  .detailContent {
+    margin-top: 10px;
+  }
+  .detailContent .detailItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .detailContent .detailItem .detailImg {
+    width: 380px;
+    height: 300px;
+  }
+  .detailContent .detailItem .detailImg img {
+    width: 100%;
+  }
+  .detailContent .detailItem .detaitTitle {
+    width: 380px;
+  }
+  .detailContent .detailItem .detaitTitle h2 {
+    color: rgb(35, 35, 100);
+  }
+  .detailContent .detailItem .detaitTitle p {
+    color: silver;
+    margin-bottom: 10px;
+  }
+  .detailContent .detailItem .detaitTitle h3 {
+    color: rgb(35, 35, 100);
+  }
+  .detailContent .detailItem .detaitTitle .size {
+    margin-top: 10px;
+  }
+  .detailContent .detailItem .detaitTitle .size button {
+    width: 30px;
+    height: 30px;
+    margin: 5px 0 0;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .detailContent .detailItem .detaitTitle .size button:hover {
+    background-color: rgb(35, 35, 100);
+    transition: all 0.5s;
+  }
+  .detailContent .detailItem .detaitTitle .qty {
+    margin-top: 10px;
+  }
+  .detailContent .detailItem .detaitTitle .qty button {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    background-color: rgb(35, 35, 100);
+    color: white;
+    border: none;
+    border-radius: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .detailContent .detailItem .detaitTitle .qty button:hover {
+    background-color: red;
+    transition: all 0.5s;
+  }
+  .detailContent .detailItem .detaitTitle .qty input {
+    height: 30px;
+    width: 40px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .detailContent .detailItem .detaitTitle .addToCart {
+    margin-top: 10px;
+  }
+  .detailContent .detailItem .detaitTitle .addToCart button {
+    height: 30px;
+    width: 160px;
+    background-color: rgb(35, 35, 100);
+    color: white;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 50px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .detailContent .detailItem .detaitTitle .addToCart button:hover {
+    background-color: rgb(25, 25, 180);
   }
 }
 @media screen and (max-width: 768px) {
@@ -715,16 +806,16 @@ footer .mainFooter .endPage p {
     color: rgb(35, 35, 100);
     margin: 0;
     font-size: 16px;
+    margin-top: 20px;
   }
   main .carouselItem .text .textTitle p {
     color: rgb(35, 35, 100);
-    margin: 0;
     font-size: 12px;
     font-weight: 400;
   }
   main .carouselItem .text .textTitle h2 {
     color: rgb(35, 35, 100);
-    margin: 10px;
+    margin: 5px;
     font-size: 16px;
   }
   main .carouselItem .text .textTitle button {
@@ -803,6 +894,95 @@ footer .mainFooter .endPage p {
     background-color: rgb(25, 25, 180);
     transition: all 0.5s;
   }
+  .detailContent {
+    margin-top: 10px;
+  }
+  .detailContent .detailItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .detailContent .detailItem .detailImg {
+    width: 380px;
+    height: 300px;
+  }
+  .detailContent .detailItem .detailImg img {
+    width: 100%;
+  }
+  .detailContent .detailItem .detaitTitle {
+    width: 380px;
+  }
+  .detailContent .detailItem .detaitTitle h2 {
+    color: rgb(35, 35, 100);
+  }
+  .detailContent .detailItem .detaitTitle p {
+    color: silver;
+    margin-bottom: 10px;
+  }
+  .detailContent .detailItem .detaitTitle h3 {
+    color: rgb(35, 35, 100);
+  }
+  .detailContent .detailItem .detaitTitle .size {
+    margin-top: 10px;
+  }
+  .detailContent .detailItem .detaitTitle .size button {
+    width: 30px;
+    height: 30px;
+    margin: 5px 0 0;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .detailContent .detailItem .detaitTitle .size button:hover {
+    background-color: rgb(35, 35, 100);
+    transition: all 0.5s;
+  }
+  .detailContent .detailItem .detaitTitle .qty {
+    margin-top: 10px;
+  }
+  .detailContent .detailItem .detaitTitle .qty button {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    background-color: rgb(35, 35, 100);
+    color: white;
+    border: none;
+    border-radius: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .detailContent .detailItem .detaitTitle .qty button:hover {
+    background-color: red;
+    transition: all 0.5s;
+  }
+  .detailContent .detailItem .detaitTitle .qty input {
+    height: 30px;
+    width: 40px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .detailContent .detailItem .detaitTitle .addToCart {
+    margin-top: 10px;
+  }
+  .detailContent .detailItem .detaitTitle .addToCart button {
+    height: 30px;
+    width: 160px;
+    background-color: rgb(35, 35, 100);
+    color: white;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 50px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .detailContent .detailItem .detaitTitle .addToCart button:hover {
+    background-color: rgb(25, 25, 180);
+  }
 }
 @media screen and (max-width: 576px) {
   .content {
@@ -831,16 +1011,16 @@ footer .mainFooter .endPage p {
     color: rgb(35, 35, 100);
     margin: 5px;
     font-size: 16px;
+    margin-top: 20px;
   }
   main .carouselItem .text .textTitle p {
     color: rgb(35, 35, 100);
-    margin: 0;
     font-size: 12px;
     font-weight: 400;
   }
   main .carouselItem .text .textTitle h2 {
     color: rgb(35, 35, 100);
-    margin: 10px;
+    margin: 2px;
     font-size: 16px;
   }
   main .carouselItem .text .textTitle button {
@@ -976,5 +1156,48 @@ footer .mainFooter .endPage p {
   }
   .detailContent .detailItem .detaitTitle .addToCart button:hover {
     background-color: rgb(25, 25, 180);
+  }
+}
+.container {
+  perspective: 100px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateLogo 4s infinite;
+  text-align: center;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-color: #072693;
+  border-radius: 100%;
+}
+
+.back {
+  background-color: #760cd9;
+  border-radius: 100%;
+  transform: rotateY(180deg);
+}
+
+@keyframes rotateLogo {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
   }
 }/*# sourceMappingURL=style.css.map */
