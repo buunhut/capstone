@@ -37,7 +37,7 @@ if (localCarousel == null) {
 }
 
   carousel = "";
-  for (var i = 0; i < 3; i++) {
+  for (var i = 0; i < 6; i++) {
     carousel += `       
     <div class="owl-item">
         <div class="carouselItem">
