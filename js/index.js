@@ -99,33 +99,10 @@ function getData() {
   //   kết nối API thành công
   promise.then(function (res) {
     data = res.data.content;
-    carousel = "";
 
-    for(var i = 0; i < 4; i++){
-      carousel += `       
-
-        <div class="owl-item">
-            <div class="carouselItem">
-                <div class="picture">
-                    <img src="${data[i].image}" alt="">
-                </div>
-                <div class="text">
-                    <div class="textTitle">
-                        <h3>${data[i].name}</h3>
-                        <p>${data[i].shortDescription}</p>
-                        <h2>$ ${data[i].price}</h2>
-                        <button onclick="buyNow()">Buy now</button>
-                        <button><a id="detail" href="./detail.html?id=${data[i].id}&name=${data[i].name}" onclick="detail(${data[i].id})">Detail</a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-      `;
-    }
+     localStorage.setItem('carousel', JSON.stringify(data)); 
     
 
-    console.log(carousel)
-    document.getElementById("carousel").innerHTML = carousel;
 
     console.log(data);
     var products = "";
@@ -169,6 +146,41 @@ function getData() {
   });
 }
 
-getData();
+
+var carouselLocal = JSON.parse(localStorage.getItem('carousel'));
+
+console.log(carouselLocal)
+carousel = "";
+
+for(var i = 0; i < carouselLocal.length ; i++){
+  carousel += `       
+    <div class="owl-item">
+        <div class="carouselItem">
+            <div class="picture">
+                <img src=${carouselLocal[i].image} alt="">
+            </div>
+            <div class="text">
+                <div class="textTitle">
+                    <h3>${carouselLocal[i].name}</h3>
+                    <p>${carouselLocal[i].shortDescription}</p>
+                    <h2>Price $${carouselLocal[i].price}</h2>
+                    <button onclick="buyNow()">Buy now</button>
+                    <button><a id="detail" href="./detail.html?id=${carouselLocal[i].id}&name=${carouselLocal[i].name}" onclick="detail(${carouselLocal[i].id})">Detail</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+  `;
+}
+
+console.log(carousel)
+// console.log(document.getElementById("carousel"))
+document.getElementById("carousel").innerHTML = carousel;
+
+
+window.onload= function(){
+  getData();
+}
+
 
 

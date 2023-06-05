@@ -45,8 +45,7 @@ function getDataDetail() {
         
         `;
         
-      })  
-
+      });
 
       var detail = `
         <div class="detailImg">
@@ -75,6 +74,52 @@ function getDataDetail() {
 
       // đổ sản phẩm ra ngoài
       document.getElementById("detail").innerHTML = detail;
+
+      // sản phẩm liên quan
+      var sanPhamLienQuan = "";
+      var realatedProducts = data.relatedProducts;
+      realatedProducts.forEach(function(item){
+        sanPhamLienQuan += `
+        <div class="productItem">
+        <div class="itemBg">
+          <a href="./detail.html?id=${item.id}&name=${item.name}" onclick="detail(${item.id})">
+              <div class="itemImg">
+                  <img src="${item.image}" alt="hình sản phẩm">
+                  <div class="overlay"></div>
+                  <div class="light"></div>
+
+              </div>
+              <div class="itemText">
+                  <!-- <hr> -->
+                  <div class="itemName">
+                      <h4>${item.name}</h4>
+                  </div>
+                  <div class="itemDescription">
+                      <p>${item.shortDescription}</p>
+                  </div>
+              </div>
+          </a>
+          <div class="itemButton">
+              <button>Buy now</button>
+              <h3>$ ${item.price}</h3>
+          </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        ` 
+
+      });
+      document.getElementById("Reatale").innerHTML = sanPhamLienQuan;
+
+
+
+      console.log(realateProducts);
   
   
   
