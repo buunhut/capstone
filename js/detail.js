@@ -19,13 +19,11 @@ if (questionMarkIndex !== -1) {
     // Nếu key là "id" thì lấy giá trị value là ID
     if (param[0] === "id") {
       var id = param[1];
-      console.log("ID: " + id);
+      // console.log("ID: " + id);
       break; // Thoát khỏi vòng lặp khi đã tìm thấy ID
     }
   }
 }
-
-
 function getDataDetail() {
     var promise = axios({
       url: "https://shop.cyberlearn.vn/api/Product/getbyid?id=" + id,
@@ -35,18 +33,14 @@ function getDataDetail() {
     //   kết nối API thành công
     promise.then(function (res) {
       data = res.data.content;
-      console.log(data)
-
+      // console.log(data)
       var arrSize = data.size;
       var size = "";
       arrSize.forEach(function(item){
         size += `
         <button type="button" onclick="choseSize('${item})">${item}</button>       
-        
         `;
-        
       });
-
       var detail = `
         <div class="detailImg">
             <img src="${data.image}" alt="">
@@ -55,15 +49,14 @@ function getDataDetail() {
             <h2>${data.name}</h2>
             <p>${data.description}</p>
             <h2>Price: $${data.price}</h2>
-
             <div class="size">
                 <h3>Your size</h3>
                 ${size}                
             </div>
             <div class="qty">
-                <h3>Qty:</h3>
+                <h3>Quantity:</h3>
                 <button type="button" onclick="giam()">-</button>
-                <input type="text" value="1" name="" id="qty">
+                <input type="text" value="1" name="" id="qty" readOnly>
                 <button type="button" onclick="tang()">+</button>
             </div>
             <div class="addToCart">
@@ -71,10 +64,8 @@ function getDataDetail() {
             </div>
          </div>
         `;
-
       // đổ sản phẩm ra ngoài
       document.getElementById("detail").innerHTML = detail;
-
       // sản phẩm liên quan
       var sanPhamLienQuan = "";
       var realatedProducts = data.relatedProducts;
@@ -105,32 +96,34 @@ function getDataDetail() {
           </div>
             </div>
         </div>
-        
-        
-        
-        
-        
-        
-        
         ` 
-
       });
       document.getElementById("Reatale").innerHTML = sanPhamLienQuan;
-
-
-
-      console.log(realateProducts);
-  
-  
-  
-  
     });
-  
     //   kết nối API lỗi
     promise.catch(function (err) {
       console.log(err);
     });
-  }
-  
+  }  
   getDataDetail();
   
+
+  //nút qty
+  function giam(){
+    var qty = Number(document.getElementById("qty").value);
+    document.getElementById("qty").value = qty - 1;
+    var n = Number(document.getElementById("qty").value);
+    if(n == 0){
+      document.getElementById("qty").value = 1;
+    }
+
+
+
+  }
+
+  function tang(){
+     var qty = Number(document.getElementById("qty").value);
+     document.getElementById("qty").value = qty + 1;
+
+
+  }

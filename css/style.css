@@ -521,6 +521,11 @@ footer .mainFooter .endPage p {
   color: white;
   font-size: 16px;
   font-weight: 600;
+  cursor: pointer;
+}
+.detailContent .detailItem .detaitTitle .size button:hover {
+  background-color: rgb(35, 35, 100);
+  transition: all 0.5s;
 }
 .detailContent .detailItem .detaitTitle .qty {
   margin-top: 10px;
@@ -535,11 +540,18 @@ footer .mainFooter .endPage p {
   border-radius: 100%;
   font-size: 18px;
   font-weight: 600;
+  cursor: pointer;
+}
+.detailContent .detailItem .detaitTitle .qty button:hover {
+  background-color: red;
+  transition: all 0.5s;
 }
 .detailContent .detailItem .detaitTitle .qty input {
   height: 30px;
-  width: 40px;
+  width: 50px;
   padding: 10px;
+  font-size: 18px;
+  font-weight: 600;
 }
 .detailContent .detailItem .detaitTitle .addToCart {
   margin-top: 20px;
@@ -550,6 +562,12 @@ footer .mainFooter .endPage p {
   background-color: rgb(35, 35, 100);
   color: white;
   font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.detailContent .detailItem .detaitTitle .addToCart button:hover {
+  background-color: rgb(25, 25, 180);
 }
 
 @media screen and (max-width: 992px) {
@@ -910,6 +928,11 @@ footer .mainFooter .endPage p {
     color: white;
     font-size: 14px;
     font-weight: 600;
+    cursor: pointer;
+  }
+  .detailContent .detailItem .detaitTitle .size button:hover {
+    background-color: rgb(35, 35, 100);
+    transition: all 0.5s;
   }
   .detailContent .detailItem .detaitTitle .qty {
     margin-top: 10px;
@@ -924,11 +947,18 @@ footer .mainFooter .endPage p {
     border-radius: 100%;
     font-size: 14px;
     font-weight: 600;
+    cursor: pointer;
+  }
+  .detailContent .detailItem .detaitTitle .qty button:hover {
+    background-color: red;
+    transition: all 0.5s;
   }
   .detailContent .detailItem .detaitTitle .qty input {
     height: 30px;
     width: 40px;
     padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
   }
   .detailContent .detailItem .detaitTitle .addToCart {
     margin-top: 10px;
@@ -941,5 +971,10 @@ footer .mainFooter .endPage p {
     font-size: 16px;
     border: none;
     margin-bottom: 50px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .detailContent .detailItem .detaitTitle .addToCart button:hover {
+    background-color: rgb(25, 25, 180);
   }
 }/*# sourceMappingURL=style.css.map */

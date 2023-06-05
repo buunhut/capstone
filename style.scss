@@ -550,6 +550,11 @@ footer {
           color: $mainTextColor;
           font-size: 16px;
           font-weight: 600;
+          cursor: pointer;
+          &:hover {
+            background-color: $mainColor;
+            transition: all 0.5s;
+          }
         }
       }
       .qty {
@@ -564,11 +569,18 @@ footer {
           border-radius: 100%;
           font-size: 18px;
           font-weight: 600;
+          cursor: pointer;
+          &:hover {
+            background-color: red;
+            transition: all 0.5s;
+          }
         }
         input {
           height: 30px;
-          width: 40px;
+          width: 50px;
           padding: 10px;
+          font-size: 18px;
+          font-weight: 600;
         }
       }
       .addToCart {
@@ -579,6 +591,12 @@ footer {
           background-color: $mainColor;
           color: $mainTextColor;
           font-size: 18px;
+          border: none;
+          cursor: pointer;
+          border-radius: 10px;
+          &:hover {
+            background-color: $hoverBt;
+          }
         }
       }
     }
@@ -988,6 +1006,11 @@ footer {
             color: $mainTextColor;
             font-size: 14px;
             font-weight: 600;
+            cursor: pointer;
+            &:hover {
+              background-color: $mainColor;
+              transition: all 0.5s;
+            }
           }
         }
         .qty {
@@ -1002,11 +1025,18 @@ footer {
             border-radius: 100%;
             font-size: 14px;
             font-weight: 600;
+            cursor: pointer;
+            &:hover {
+              background-color: red;
+              transition: all 0.5s;
+            }
           }
           input {
             height: 30px;
             width: 40px;
             padding: 10px;
+            font-size: 18px;
+            font-weight: 600;
           }
         }
         .addToCart {
@@ -1019,6 +1049,12 @@ footer {
             font-size: 16px;
             border: none;
             margin-bottom: 50px;
+            cursor: pointer;
+            border-radius: 10px;
+
+            &:hover {
+              background-color: $hoverBt;
+            }
           }
         }
       }
