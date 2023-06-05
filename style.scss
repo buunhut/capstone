@@ -1080,12 +1080,14 @@ footer {
       margin: 0 auto;
       .picture {
         width: 380px;
+        margin-top: -50px;
+        overflow: hidden;
       }
       .text {
         position: absolute;
         bottom: 0;
         left: 0;
-        transform: translateY(-60px);
+        transform: translateY(-80px);
         width: 100%;
         // height: 100px;
         .textTitle {
@@ -1096,10 +1098,9 @@ footer {
             margin-top: 20px;
           }
           p {
-            color: $mainColor;
-            // margin: 0;
+            color: silver;
             font-size: 12px;
-            font-weight: 400;
+            font-weight: 300;
           }
           h2 {
             color: $mainColor;
@@ -1108,7 +1109,7 @@ footer {
           }
           button {
             padding: 5px 10px;
-            margin-top: 0;
+            margin-left: 10px;
             font-size: 12px;
             margin-bottom: 20px;
           }

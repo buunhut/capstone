@@ -999,12 +999,14 @@ footer .mainFooter .endPage p {
   }
   main .carouselItem .picture {
     width: 380px;
+    margin-top: -50px;
+    overflow: hidden;
   }
   main .carouselItem .text {
     position: absolute;
     bottom: 0;
     left: 0;
-    transform: translateY(-60px);
+    transform: translateY(-80px);
     width: 100%;
   }
   main .carouselItem .text .textTitle h3 {
@@ -1014,9 +1016,9 @@ footer .mainFooter .endPage p {
     margin-top: 20px;
   }
   main .carouselItem .text .textTitle p {
-    color: rgb(35, 35, 100);
+    color: silver;
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 300;
   }
   main .carouselItem .text .textTitle h2 {
     color: rgb(35, 35, 100);
@@ -1025,7 +1027,7 @@ footer .mainFooter .endPage p {
   }
   main .carouselItem .text .textTitle button {
     padding: 5px 10px;
-    margin-top: 0;
+    margin-left: 10px;
     font-size: 12px;
     margin-bottom: 20px;
   }

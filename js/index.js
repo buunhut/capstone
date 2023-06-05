@@ -46,10 +46,12 @@ if (localCarousel == null) {
                 <div class="textTitle">
                     <h3>${localCarousel[i].name}</h3>
                     <p>${localCarousel[i].shortDescription}</p>
-                    <h2>Price $${localCarousel[i].price}</h2>
-                    <button onclick="buyNow()">Buy now</button>
-                    <button><a id="detail" href="./detail.html?id=${localCarousel[i].id}&name=${localCarousel[i].name}" onclick="detail(${localCarousel[i].id})">Detail</a></button>
-                </div>
+                    <div class="smallScreen">
+                      <h2>Price $${localCarousel[i].price}</h2>
+                      <button onclick="buyNow()">Buy now</button>
+                      <button><a id="detail" href="./detail.html?id=${localCarousel[i].id}&name=${localCarousel[i].name}" onclick="detail(${localCarousel[i].id})">Detail</a></button>
+                    </div>
+                  </div>
             </div>
         </div>
     </div>
