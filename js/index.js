@@ -30,12 +30,14 @@ console.log(localCarousel);
 if (localCarousel == null) {
   localCarousel = JSON.parse(localStorage.getItem("carousel"));
   console.log(localCarousel);
-  location.reload();
+  setTimeout(function() {
+    location.reload();
+  }, 10000);
 
 }
 
   carousel = "";
-  for (var i = 0; i < localCarousel.length; i++) {
+  for (var i = 0; i < 3; i++) {
     carousel += `       
     <div class="owl-item">
         <div class="carouselItem">
