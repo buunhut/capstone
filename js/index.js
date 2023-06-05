@@ -1,3 +1,79 @@
+function getDataCarousel() {
+  let promise = axios({
+    url: "https://shop.cyberlearn.vn/api/Product",
+    method: "GET",
+    responseType: "json",
+  });
+  //   kết nối API thành công
+  promise.then(function (res) {
+    data = res.data.content;
+
+    // lưu carousel vào local
+    localStorage.setItem("carousel", JSON.stringify(data));
+    console.log("done data carosel");
+  });
+  //   kết nối API lỗi
+  promise.catch(function (err) {
+    console.log(err);
+  });
+
+
+
+
+}
+getDataCarousel();
+
+let localCarousel = JSON.parse(localStorage.getItem("carousel"));    
+console.log(localCarousel);
+
+
+if (localCarousel == null) {
+  localCarousel = JSON.parse(localStorage.getItem("carousel"));
+  console.log(localCarousel);
+  location.reload();
+
+}
+
+  carousel = "";
+  for (var i = 0; i < localCarousel.length; i++) {
+    carousel += `       
+    <div class="owl-item">
+        <div class="carouselItem">
+            <div class="picture">
+                <img src=${localCarousel[i].image} alt="">
+            </div>
+            <div class="text">
+                <div class="textTitle">
+                    <h3>${localCarousel[i].name}</h3>
+                    <p>${localCarousel[i].shortDescription}</p>
+                    <h2>Price $${localCarousel[i].price}</h2>
+                    <button onclick="buyNow()">Buy now</button>
+                    <button><a id="detail" href="./detail.html?id=${localCarousel[i].id}&name=${localCarousel[i].name}" onclick="detail(${localCarousel[i].id})">Detail</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+  `;
+  }
+
+// console.log(document.getElementById("carousel"))
+document.getElementById("carousel").innerHTML = carousel;
+
+$(document).ready(function () {
+  $(".owl-carousel").owlCarousel({
+      items: 1,
+      loop: true,
+      autoplay: true,
+      nav: true,
+      dots: false,
+      // margin: 40,
+  });
+});
+
+
+
+
+
 function getData() {
   var promise = axios({
     url: "https://shop.cyberlearn.vn/api/Product",
@@ -8,11 +84,9 @@ function getData() {
   promise.then(function (res) {
     data = res.data.content;
 
-    console.log(data);
-
+    // lưu carousel vào local
     localStorage.setItem("carousel", JSON.stringify(data));
 
-    console.log(data);
     var products = "";
     data.forEach(function (item) {
       products += `
@@ -53,35 +127,5 @@ function getData() {
     console.log(err);
   });
 }
-
-var carouselLocal = JSON.parse(localStorage.getItem("carousel"));
-
-console.log(carouselLocal);
-carousel = "";
-
-for (var i = 0; i < carouselLocal.length; i++) {
-  carousel += `       
-    <div class="owl-item">
-        <div class="carouselItem">
-            <div class="picture">
-                <img src=${carouselLocal[i].image} alt="">
-            </div>
-            <div class="text">
-                <div class="textTitle">
-                    <h3>${carouselLocal[i].name}</h3>
-                    <p>${carouselLocal[i].shortDescription}</p>
-                    <h2>Price $${carouselLocal[i].price}</h2>
-                    <button onclick="buyNow()">Buy now</button>
-                    <button><a id="detail" href="./detail.html?id=${carouselLocal[i].id}&name=${carouselLocal[i].name}" onclick="detail(${carouselLocal[i].id})">Detail</a></button>
-                </div>
-            </div>
-        </div>
-    </div>
-  `;
-}
-
-console.log(carousel);
-// console.log(document.getElementById("carousel"))
-document.getElementById("carousel").innerHTML = carousel;
 
 getData();
