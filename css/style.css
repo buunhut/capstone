@@ -1043,7 +1043,8 @@ footer .mainFooter .endPage p {
   main .container .products {
     flex-direction: column;
     justify-content: center;
-    width: 500px;
+    width: 400px;
+    overflow: hidden;
   }
   footer .mainFooter .footerContent {
     flex-direction: column;

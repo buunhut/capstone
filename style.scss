@@ -1129,7 +1129,8 @@ footer {
       .products {
         flex-direction: column;
         justify-content: center;
-        width: 500px;
+        width: 400px;
+        overflow: hidden;
       }
     }
   }
