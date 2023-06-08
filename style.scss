@@ -1303,3 +1303,79 @@ footer {
   }
 }
 
+// Trang register
+.container {
+  #regis {
+    display: block;
+    margin: 80px 0 20px;
+
+    &:after {
+      display: none;
+    }
+  }
+  .register {
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    .registerContent {
+      width: 300px;
+      .registerItem {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 15px;
+        .gender {
+          display: flex;
+          justify-content: flex-start;
+          margin-right: 20px;
+        }
+        input {
+          width: 100%;
+          height: 30px;
+          margin-bottom: 5px;
+          margin-right: 5px;
+          border: none;
+          border-bottom: solid $mainColor 2px;
+          outline: none;
+          font-size: 15px;
+        }
+        .dauSao {
+          position: absolute;
+          right: 5px;
+          color: red;
+          font-weight: 300;
+        }
+      }
+      button {
+        width: 120px;
+        height: 40px;
+        margin-top: 20px;
+        background-color: $mainColor;
+        color: $mainTextColor;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.5s;
+        &:hover {
+          background-color: $hoverBt;
+        }
+      }
+      .gioiTinh {
+        margin-top: 18px;
+      }
+      .checkValid {
+        color: red;
+        opacity: 50%;
+        font-size: 15px;
+      }
+      #kiemTraGender {
+        width: 200px;
+        display: block;
+      }
+    }
+  }
+}

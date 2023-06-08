@@ -5,33 +5,33 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <!-- FontAwesome 6.2.0 CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
             integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <!-- google font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Oswald:wght@300;400;500;600;700&display=swap"
             rel="stylesheet">
+
         <!-- carousel -->
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
             integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
-
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
             integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-
         <!-- link css -->
         <link rel="stylesheet" href="./css/style.css">
 
-        <title>Shoes shop</title>
+        <title>Caption</title>
     </head>
 
     <body>
@@ -41,8 +41,7 @@
                 <div class="container">
                     <div class="content">
                         <div class="logo">
-                            <div class="front"><a href="#">B</a></div>
-                            <div class="back"><a href="#">B</a></div>
+                            <a href="#">LOGO</a>
                         </div>
                         <div class="cart">
                             <button type="button">
@@ -50,8 +49,8 @@
                             </button>
                             <div class="login">
                                 <ul>
-                                    <li><a href="./login.html">Login</a></li>
-                                    <li><a href="./register.html">Register</a></li>
+                                    <li><a href="">Login</a></li>
+                                    <li><a href="">Register</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -73,64 +72,69 @@
         </header>
         <!-- main -->
         <main>
-
-
-
-            <!-- carousel -->
-            <!-- <div class="owl-carousel owl-theme owl-loaded">
-                <div class="owl-stage-outer">
-                    <div class="owl-stage" id="carousel">
-                    </div>
-                </div>
-            </div> -->
-            <!-- products -->
             <div class="container">
-                <div class="products">
-                    <div class="detailContent">
-                        <h1>Products detail</h1>
-                        <div class="detailItem" id="detail">
-                            <!-- <div class="detailImg">
-                                <img src="./img/bg2.jpg" alt="">
+                <h1 id="regis">Register</h1>
+                <form action="">
+                    <div class="register">
+                        <div class="registerContent">
+                            <div class="registerItem">
+                                <input type="text" id="email" placeholder="Email"
+                                    onblur="regexEmail('email', 'kiemTraEmail')">
+                                <span class="dauSao" id="sao1" style="display: none;">(*)</span>
                             </div>
-                            <div class="detaitTitle">
-                                <h2>Product name:</h2>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt rem itaque
-                                    assumenda, amet magnam consequatur doloribus natus quia dolorum ut?</p>
-                                <h2>Price: $100</h2>
-                                <div class="size">
-                                    <h3>Your size</h3>
+                            <span class="checkValid" id="kiemTraEmail"></span>
 
-                                    <button type="button" onclick="choseSize()">39</button>
-                                    <button type="button" onclick="choseSize()">40</button>
-                                    <button type="button" onclick="choseSize()">41</button>
-                                    <button type="button" onclick="choseSize()">42</button>
-                                </div>
-                                <div class="qty">
-                                    <h3>Qty:</h3>
-                                    <button type="button" onclick="giam()">-</button>
-                                    <input type="text" value="1" name="" id="qty">
-                                    <button type="button" onclick="tang()">+</button>
-                                </div>
-                                <div class="addToCart">
-                                    <button type="button" onclick="addToCart()">Add to cart</button>
-                                </div>
-                            </div> -->
+                            <div class="registerItem">
+                                <input type="text" id="pass" placeholder="Password"
+                                    onblur="regexPass('pass', 'kiemTraPass')">
+                                <span class="dauSao" id="sao2" style="display: none;">(*)</span>
+                            </div>
+                            <span class="checkValid" id="kiemTraPass"></span>
+
+                            <div class="registerItem">
+                                <input type="text" id="passConfirm" placeholder="Password confirm"
+                                    onblur="regexPassConfirm('pass', 'passConfirm', 'kiemTraPassConfirm')">
+                                <span class="dauSao" id="sao3" style="display: none;">(*)</span>
+                            </div>
+                            <span class="checkValid" id="kiemTraPassConfirm"></span>
                         </div>
+
+                        <div class="registerContent">
+                            <div class="registerItem">
+                                <input type="text" id="name" placeholder="Name"
+                                    onblur="regexName('name', 'kiemTraname')">
+                                <span class="dauSao" id="sao4" style="display: none;">(*)</span>
+                            </div>
+                            <span class="checkValid" id="kiemTraname"></span>
+
+                            <div class="registerItem">
+                                <input type="text" id="phone" placeholder="Phone"
+                                    onblur="regexPhone('phone', 'kiemTraPhone')">
+                                <span class="dauSao" id="sao5" style="display: none;">(*)</span>
+                            </div>
+                            <span class="checkValid" id="kiemTraPhone"></span>
+
+                            <div class="registerItem gioiTinh">
+                                <div class="gender">
+                                    <span>Gender:</span>
+                                </div>
+                                <div class="gender">
+                                    <input id="male" onclick="chonGioiTinhNam('male','female')" type="checkbox">
+                                    <span>Male</span>
+                                </div>
+                                <div class="gender">
+                                    <input id="female" onclick="chonGioiTinhNu('male','female')" type="checkbox">
+                                    <span>Female</span>
+                                </div>
+
+                            </div>
+                            <span class="checkValid" id="kiemTraGender"></span>
+                            <button onclick="getDataUser()" type="button">Submit</button>
+                        </div>
+
                     </div>
-                </div>
+                </form>
             </div>
-
-
-
-            <!-- products -->
-            <div class="container">
-                <h1>Reatale products</h1>
-                <div class="products" id="Reatale">
-
-                </div>
-            </div>
-
-
         </main>
         <!-- footer -->
         <footer>
@@ -224,9 +228,6 @@
         </div>
         </div>
 
-
-
-
         <!-- jquery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
             integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
@@ -235,10 +236,13 @@
             integrity="sha512-KgffulL3mxrOsDicgQWA11O6q6oKeWcV00VxgfJw4TcM8XRQT8Df9EsrYxDf7tpVpfl3qcYD96BpyPvA4d1FDQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+
         <!-- own carousel -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
             integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
 
         <!-- axios -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
@@ -246,11 +250,8 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-        <script src="./js/menu.js"></script>
-        <script src="./js/detail.js"></script>
-        
-
-
+        <script src="./js/register.js"></script>
+        <script src="./js/validation.js"></script>
     </body>
 
     </html>
